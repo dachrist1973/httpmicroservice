@@ -1,7 +1,7 @@
 package database
 
 import (
-	"interviewMSrvHTTP/common"
+	"httpmicroservice/common"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

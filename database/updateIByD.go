@@ -2,9 +2,9 @@ package database
 
 import (
 	"fmt"
-	"interviewMSrvHTTP/common"
-	"interviewMSrvHTTP/models"
-	"interviewMSrvHTTP/srverrors"
+	"httpmicroservice/common"
+	"httpmicroservice/models"
+	"httpmicroservice/srverrors"
 	"strconv"
 )
 

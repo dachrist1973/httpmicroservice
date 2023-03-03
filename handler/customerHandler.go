@@ -3,16 +3,16 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
-	"interviewMSrvHTTP/database"
-	"interviewMSrvHTTP/helper"
-	"interviewMSrvHTTP/models"
-	"interviewMSrvHTTP/srverrors"
+	"httpmicroservice/database"
+	"httpmicroservice/helper"
+	"httpmicroservice/models"
+	"httpmicroservice/srverrors"
 	"net/http"
 
 	"github.com/gorilla/mux"
 )
 
-var pagelimit int = 0
+var pagelimit int = 50
 
 type CustRepsonse struct {
 	Customers []models.Customer `json: customers`
@@ -32,11 +32,10 @@ func CustomerHandler(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusBadRequest)
 		}
 
-		if pagelimit == 0 {
+		if limit > 0 {
 			pagelimit = limit
 		}
-		offset := (page - 1) * pagelimit
-
+		offset := (page - 1) * pagelimit 
 		customers, err := database.GetAllCustomers(wh, limit, offset)
 		if err != nil {
 			srverrors.HandleError(err, w)
@@ -56,7 +55,6 @@ func CustomerHandler(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusBadRequest)
 			return
 		}
-
 		retcust, err := database.CreateCustomer(cust)
 		if err != nil {
 			w.WriteHeader(http.StatusConflict)

@@ -2,7 +2,7 @@ package helper
 
 import (
 	"fmt"
-	"interviewMSrvHTTP/srverrors"
+	"httpmicroservice/srverrors"
 	"net/url"
 	"strconv"
 )

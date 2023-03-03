@@ -1,10 +1,10 @@
 package main
 
 import (
-	"interviewMSrvHTTP/common"
-	"interviewMSrvHTTP/database"
-	"interviewMSrvHTTP/handler"
-	"interviewMSrvHTTP/models"
+	"httpmicroservice/common"
+	"httpmicroservice/database"
+	"httpmicroservice/handler"
+	"httpmicroservice/models"
 	"net/http"
 	"net/http/httptest"
 	"testing"

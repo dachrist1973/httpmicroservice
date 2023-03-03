@@ -1,4 +1,4 @@
-module interviewMSrvHTTP
+module httpmicroservice
 
 go 1.19
 

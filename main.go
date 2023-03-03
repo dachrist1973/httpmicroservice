@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"interviewMSrvHTTP/database"
-	"interviewMSrvHTTP/handler"
+	"httpmicroservice/database"
+	"httpmicroservice/handler"
 
-	//"interviewMSrvHTTP/models"
+	//"httpmicroservice/models"
 
 	"github.com/gorilla/mux"
 
@@ -51,8 +51,6 @@ func main() {
 	// }
 
 	// List all available end points.
-
-	fmt.Printf("Using %s Framework\n", framework)
 	r := mux.NewRouter()
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Path: %s!", r.URL.Path[1:])

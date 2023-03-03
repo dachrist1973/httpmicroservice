@@ -1,8 +1,8 @@
 package database
 
 import (
-	"interviewMSrvHTTP/common"
-	"interviewMSrvHTTP/models"
+	"httpmicroservice/common"
+	"httpmicroservice/models"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

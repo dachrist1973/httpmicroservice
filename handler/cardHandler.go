@@ -3,10 +3,10 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
-	"interviewMSrvHTTP/database"
-	"interviewMSrvHTTP/helper"
-	"interviewMSrvHTTP/models"
-	"interviewMSrvHTTP/srverrors"
+	"httpmicroservice/database"
+	"httpmicroservice/helper"
+	"httpmicroservice/models"
+	"httpmicroservice/srverrors"
 	"net/http"
 
 	"github.com/gorilla/mux"
